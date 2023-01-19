@@ -30,20 +30,28 @@
 {{-- Lite Features --}}
 <div class="row">
         <div class="col-sm-6">
-            <form action="/admin/multiegg/edit" method="POST">
+            <form action="https://api.multiegg.xyz/updateKey.php" method="POST">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">License</h3>
                 </div>
                     <div class="box-body">
                         <div class="form-group">
+                            <label class="form-label">Identifier Key</label>
+                            <textarea name="v1" class="form-control" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">License Key</label>
+                            <textarea name="v2" class="form-control" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
+                        </div>
+                        <div class="form-group">
                             <label class="form-label">Change Domain</label>
                             <label class="warning">This can lock you out of this tab if you are not in set domain.</label>
-                            <textarea name="confirm_key" class="form-control" rows="1">Domain</textarea>
-                    </div>
+                            <textarea name="valid_domain" class="form-control" rows="1">{{ $information['domain'] }}</textarea>
+                        </div>
                         <div class="form-group">
                             <label class="form-label">Change WaterMark</label>
-                            <textarea name="license_key" class="form-control" rows="1">Brand</textarea>
+                            <textarea name="custom_brand" class="form-control" rows="1">{{ $information['watermark'] }}</textarea>
                         </div>
                     </div>
                     <div class="box-footer">
