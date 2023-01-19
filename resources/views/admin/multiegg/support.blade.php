@@ -27,4 +27,7 @@
 {{-- Adds MultiEgg's navabar --}}
 @section('content')
 @yield('multiegg::nav')
+
+<strong>Unfortunately, this section is not complete. Please use Discord Support Tickets for now.</strong>
+
 @endsection
