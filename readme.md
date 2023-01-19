@@ -47,4 +47,4 @@ Next run these commands:
 
 php artisan migrate --force
 yarn build:production
-php artisan optimize
+php artisan route:clear
