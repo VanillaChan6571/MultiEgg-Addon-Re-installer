@@ -63,13 +63,13 @@ use app\Http\Controllers\MultiEggController;
                     @if($valid != "Inactive")
                     Decrypted License: <strong>{{ $key_decrypted }}</strong></br>
                     Active Plan: <strong>{{ $plan }}</strong></br>
-                    Expires In: <strong>{{ $expires }}</strong></br>
+                    Expires: <strong>{{ $expires }}</strong></br>
                     Client: <strong>{{ $client }}</strong></br>
                     Client Business: <strong>{{ $business }}</strong></br>
                     Status: <strong>{{ $valid }}</strong></br>
                     @else
                     Status: <strong>{{ $valid }}</strong></br>
-                    Probable Causes: <strong>Invalid Domain | Wrong Key</strong></br>
+                    Probable Causes: <strong>Invalid Domain | Wrong Key | Expired Key</strong></br>
                     @endif
                 </div>
             </div>
