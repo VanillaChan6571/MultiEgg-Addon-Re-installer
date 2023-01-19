@@ -2,6 +2,11 @@
 
 namespace Pterodactyl\Models;
 
+    // please no remove, the other tabs are literally identical to yours, and if you tryna access a higher plan, the api will literally smack you across the face and break your panel.
+    // sorry there, but welp, I guess that's one way to prevent pervs from tryna see the code nonsense
+    //
+    // this is your warning. Support will not play nice >:(
+
 class MultiEgg extends Model
 {
     /**
