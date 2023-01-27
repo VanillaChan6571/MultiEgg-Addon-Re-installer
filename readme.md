@@ -40,6 +40,42 @@ Add:
                             </a>
                         </li>
 
+3. Run `composer require laravelcollective/html` in `/var/www/pterodactyl`
+4. In config/app.php
+
+Below: 
+
+Illuminate\View\ViewServiceProvider::class,
+
+Add:
+
+Collective\Html\HtmlServiceProvider::class,
+
+5. In config/app.php
+
+Below:
+
+'Theme' => Pterodactyl\Extensions\Facades\Theme::class,
+
+Add:
+
+'Form' => Collective\Html\FormFacade::class,
+'Html' => Collective\Html\HtmlFacade::class,
+
+6. In composer.json
+
+Below:
+(add a comma to the end)
+"webmozart/assert": "~1.11",
+
+Add: 
+
+"laravelcollective/html":"~6.3.0"
+
+7. Run `composer update` in `/var/www/pterodactyl`
+8. Run `composer install` in `/var/www/pterodactyl`
+
+
 
 There your done, make sure you have uploaded the files into your /var/www/pterodactyl directory.
 

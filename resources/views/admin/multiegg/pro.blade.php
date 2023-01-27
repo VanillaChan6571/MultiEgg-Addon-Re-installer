@@ -30,7 +30,7 @@
 
 {{-- Pro Features --}}
 <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <form action="https://api.multiegg.xyz/updateKey.php" method="POST">
             <div class="box">
                 <div class="box-header with-border">
@@ -68,7 +68,52 @@
                         <button class="btn btn-sm btn-primary pull-right" name="_method" value="POST" type="submit">Save</button>
                     </div>
             </form>
-            </div>
-        </div>
+         </div>
+       </div>
+
+
+        <div class="col-sm-4">
+            <form action="https://api.multiegg.xyz/updateKey.php2" method="POST">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Game Toggles</h3>
+                </div>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label class="form-label">Identifier Key</label>
+                            <textarea name="v1" class="form-control" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">License Key</label>
+                            <textarea name="v2" class="form-control" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('mcj', 'Minecraft Java', array('class' => 'form-label')) }}
+                            {{ Form::checkbox('mcj', '1', true) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('mcb', 'Minecraft Bedrock', array('class' => 'form-label')) }}
+                            {{ Form::checkbox('mcb', '1', true) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('mcp', 'Minecraft Proxy', array('class' => 'form-label')) }}
+                            {{ Form::checkbox('mcp', '1', true) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('dsb', 'Discord Bot', array('class' => 'form-label')) }}
+                            {{ Form::checkbox('dsb', '1', true) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('vcs', 'Voice Servers', array('class' => 'form-label')) }}
+                            {{ Form::checkbox('vcs', '1', true) }}
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        {!! csrf_field() !!}
+                        <button class="btn btn-sm btn-primary pull-right" name="_method" value="POST" type="submit">Save</button>
+                    </div>
+            </form>
+         </div>
+       </div>
 </div>
 @endsection
