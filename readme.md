@@ -65,8 +65,8 @@ Add:
 6. In composer.json
 
 Below:
-
-"webmozart/assert": "~1.11"
+(add a comma to the end)
+"webmozart/assert": "~1.11",
 
 Add: 
 
