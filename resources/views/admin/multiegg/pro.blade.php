@@ -73,7 +73,7 @@
 
 
         <div class="col-sm-4">
-            <form action="https://api.multiegg.xyz/updateKey.php2" method="POST">
+            <form action="https://api.multiegg.xyz/updateGameToggle.php" method="POST">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">Game Toggles</h3>
