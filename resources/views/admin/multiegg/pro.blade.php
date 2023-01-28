@@ -89,23 +89,23 @@
                         </div>
                         <div class="form-group">
                             {{ Form::label('mcj', 'Minecraft Java', array('class' => 'form-label')) }}
-                            {{ Form::checkbox('mcj', '1', true) }}
+                            {{ Form::checkbox('mcj', '1', $game_toggles->mcj) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('mcb', 'Minecraft Bedrock', array('class' => 'form-label')) }}
-                            {{ Form::checkbox('mcb', '1', true) }}
+                            {{ Form::checkbox('mcb', '1', $game_toggles->mcb) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('mcp', 'Minecraft Proxy', array('class' => 'form-label')) }}
-                            {{ Form::checkbox('mcp', '1', true) }}
+                            {{ Form::checkbox('mcp', '1', $game_toggles->mcp) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('dsb', 'Discord Bot', array('class' => 'form-label')) }}
-                            {{ Form::checkbox('dsb', '1', true) }}
+                            {{ Form::checkbox('dsb', '1', $game_toggles->dsb) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('vcs', 'Voice Servers', array('class' => 'form-label')) }}
-                            {{ Form::checkbox('vcs', '1', true) }}
+                            {{ Form::checkbox('vcs', '1', $game_toggles->vcs) }}
                         </div>
                     </div>
                     <div class="box-footer">
