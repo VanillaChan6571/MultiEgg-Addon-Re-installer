@@ -90,7 +90,8 @@ class MultiEggController extends Controller
             'valid'=>MultiEggController::isValid(),
             'version'=>$this->version,
             'rawkeys'=>MultiEggController::getRawKeys(),
-            'information'=>MultiEggController::getData()
+            'information'=>MultiEggController::getData(),
+            'game_toggles'=>MultiEggController::getToggles()
         ]);
     }
 
@@ -294,6 +295,22 @@ class MultiEggController extends Controller
         return false;
     }
 
+
+    public function getToggles() {
+        if(MultiEggController::keyValid()){
+            $data = MultiEggController::getLicenseDetails();
+
+            $toggles = new \stdClass();
+            $toggles->mcj = $data->game_toggles->h_mcj;
+            $toggles->mcb = $data->game_toggles->h_mcb;
+            $toggles->mcp = $data->game_toggles->h_mcp;
+            $toggles->dsb = $data->game_toggles->h_dsb;
+            $toggles->vcs = $data->game_toggles->h_vcs;
+
+            return $toggles;
+        }
+        return "ERROR";
+    }
 
     public function allowed($area) {
         if(MultiEggController::keyValid()){
