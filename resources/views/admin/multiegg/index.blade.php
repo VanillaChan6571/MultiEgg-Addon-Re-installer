@@ -7,6 +7,8 @@ use app\Http\Controllers\MultiEggController;
 @extends('layouts.admin')
 @include('partials/admin.multiegg.nav', ['activeTab' => 'overview', 'valid' => $valid])
 
+{{ Html::favicon( '/public/favicon/favicon.ico' ) }}
+
 @section('title')
     MultiEgg
 @endsection
@@ -75,12 +77,13 @@ use app\Http\Controllers\MultiEggController;
         </div>
       </div>
     <div class="row">
+    @if($valid != "Inactive")
     <div class="row" style="padding-left: 12px">
         <div class="col-sm-4">
             <form action="https://api.multiegg.xyz/updateKey.php" method="POST">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">License</h3>
+                    <h3 class="box-title">Modify License Details</h3>
                 </div>
                     <div class="box-body">
                         <div class="form-group">
@@ -122,7 +125,6 @@ use app\Http\Controllers\MultiEggController;
             </form>
          </div>
        </div>
-
         @if( $feature_perms->game_toggles )
         <div class="col-sm-4">
             <form action="https://api.multiegg.xyz/updateGameToggle.php" method="POST">
@@ -166,9 +168,11 @@ use app\Http\Controllers\MultiEggController;
                     </div>
             </form>
          </div>
-       </div>
+        </div>
        @endif
        <div class="col-xs-6 col-sm-3 text-center">
 </div>
+</div>
+@endif
 </div>
 @endsection
