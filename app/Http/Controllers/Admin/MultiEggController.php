@@ -42,53 +42,8 @@ class MultiEggController extends Controller
             'expires'=>MultiEggController::prettyDate(),
             'brand'=>MultiEggController::getBrand(),
             'key_decrypted'=>MultiEggController::getKey(),
-            'valid'=>MultiEggController::isValid()
-        ]);
-    }
-
-    /**
-     * Return the lite view.
-     */
-    public function lite()
-    {
-
-        if(!MultiEggController::allowed("LITE")){
-            return MultiEggController::denied();
-        }
-        return $this->view->make('admin.multiegg.lite', [
             'valid'=>MultiEggController::isValid(),
-            'version'=>$this->version,
-            'rawkeys'=>MultiEggController::getRawKeys(),
-            'information'=>MultiEggController::getData()
-        ]);
-    }
-
-    /**
-     * Return the plus view.
-     */
-    public function plus()
-    {
-
-        if(!MultiEggController::allowed("PLUS")){
-            return MultiEggController::denied();
-        }
-        return $this->view->make('admin.multiegg.plus', [
-            'valid'=>MultiEggController::isValid(),
-            'version'=>$this->version,
-            'rawkeys'=>MultiEggController::getRawKeys(),
-            'information'=>MultiEggController::getData()
-        ]);
-    }
-
-    public function pro()
-    {
-
-        if(!MultiEggController::allowed("PRO")){
-            return MultiEggController::denied();
-        }
-        return $this->view->make('admin.multiegg.pro', [
-            'valid'=>MultiEggController::isValid(),
-            'version'=>$this->version,
+            'feature_perms'=>MultiEggController::getFeaturePerms(),
             'rawkeys'=>MultiEggController::getRawKeys(),
             'information'=>MultiEggController::getData(),
             'game_toggles'=>MultiEggController::getToggles()
@@ -311,6 +266,21 @@ class MultiEggController extends Controller
         }
         return "ERROR";
     }
+
+    public function getFeaturePerms(){
+        if(MultiEggController::keyValid()){
+            $data = MultiEggController::getLicenseDetails();
+
+            $toggles = new \stdClass();
+            $toggles->watermark = $data->feature_perms->watermark;
+            $toggles->discord_link = $data->feature_perms->discord_link;
+            $toggles->game_toggles = $data->feature_perms->game_toggles;
+            $toggles->emails = $data->feature_perms->change_email;
+            return $toggles;
+        }
+        return "ERROR";
+    }
+
 
     public function allowed($area) {
         if(MultiEggController::keyValid()){
