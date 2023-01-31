@@ -1,4 +1,4 @@
-use app\Http\Controllers\MultiEggController;
+use app\Http\Controllers\MultiEggController; 
 
 <style>
         .extraPadd { padding-left: 100px }
