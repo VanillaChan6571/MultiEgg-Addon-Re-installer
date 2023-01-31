@@ -278,7 +278,12 @@ class MultiEggController extends Controller
             $toggles->emails = $data->feature_perms->change_email;
             return $toggles;
         }
-        return "ERROR";
+        $toggles = new \stdClass();
+        $toggles->watermark = 0;
+        $toggles->discord_link = 0;
+        $toggles->game_toggles = 0;
+        $toggles->emails = 0;
+        return $toggles;
     }
 
 
