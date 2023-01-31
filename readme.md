@@ -1,7 +1,3 @@
-First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this BETA addon. This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. If you need any support contact us at our discord server: https://discord.gg
-
-
-
 1. In routes/admin.php
 
 Under all file contents add:
@@ -74,7 +70,7 @@ Add:
 
 7. Run `composer update` in `/var/www/pterodactyl`
 8. Run `composer install` in `/var/www/pterodactyl`
-
+9. Run `chown -R www-data:www-data /var/www/pterodactyl/*` in `/var/www/pterodactyl/`
 
 
 There your done, make sure you have uploaded the files into your /var/www/pterodactyl directory.
