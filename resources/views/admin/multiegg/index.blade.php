@@ -5,7 +5,7 @@ use app\Http\Controllers\MultiEggController;
 </style>
 
 @extends('layouts.admin')
-@include('partials/admin.multiegg.nav', ['activeTab' => 'overview', 'valid' => $valid])
+@include('partials/admin.multiegg.nav', ['activeTab' => 'overview', 'valid' => $valid, 'global_settings' => $global_settings])
 
 {{ Html::favicon( '/public/favicon/favicon.ico' ) }}
 
@@ -23,6 +23,8 @@ use app\Http\Controllers\MultiEggController;
 
 @section('content')
 @yield('multiegg::nav')
+
+@if( !$global_settings->mass_disable )
 <div class="row">
         <div class="col-sm-6">
             <form action="/admin/multiegg/edit" method="POST">
@@ -173,5 +175,8 @@ use app\Http\Controllers\MultiEggController;
        <div class="col-xs-6 col-sm-3 text-center">
 </div>
 </div>
+@endif
+@else
+    <h3>WARNING</h3></br></br>The addon has been mass-disabled.</br>Please check our discord server for more information.
 @endif
 @endsection
