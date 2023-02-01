@@ -10,4 +10,13 @@ use app\Http\Controllers\MultiEggController;
             </div>
         </div>
     @endif
+    @if($global_settings->latest_version != $global_settings->current_version )
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="alert alert-warning">
+                    Your addon is outdated! Please update it as soon as you can!
+                </div>
+            </div>
+        </div>
+    @endif
 @endsection
