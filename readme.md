@@ -1,3 +1,7 @@
+First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this BETA addon. This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. If you need any support contact us at our discord server: https://discord.gg
+
+
+
 1. In routes/admin.php
 
 Under all file contents add:
@@ -35,48 +39,7 @@ Add:
                                 <i class="fa fa-gears"></i> <span>MultiEgg</span>
                             </a>
                         </li>
+                        
+3. Easy right? now finish it off by running our script:
 
-3. Run `composer require laravelcollective/html` in `/var/www/pterodactyl`
-4. In config/app.php
-
-Below: 
-
-Illuminate\View\ViewServiceProvider::class,
-
-Add:
-
-Collective\Html\HtmlServiceProvider::class,
-
-5. In config/app.php
-
-Below:
-
-'Theme' => Pterodactyl\Extensions\Facades\Theme::class,
-
-Add:
-
-'Form' => Collective\Html\FormFacade::class,
-'Html' => Collective\Html\HtmlFacade::class,
-
-6. In composer.json
-
-Below:
-(add a comma to the end)
-"webmozart/assert": "~1.11",
-
-Add: 
-
-"laravelcollective/html":"~6.3.0"
-
-7. Run `composer update` in `/var/www/pterodactyl`
-8. Run `composer install` in `/var/www/pterodactyl`
-9. Run `chown -R www-data:www-data /var/www/pterodactyl/*` in `/var/www/pterodactyl/`
-
-
-There your done, make sure you have uploaded the files into your /var/www/pterodactyl directory.
-
-Next run these commands:
-
-php artisan migrate --force
-yarn build:production
-php artisan route:clear
+bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
