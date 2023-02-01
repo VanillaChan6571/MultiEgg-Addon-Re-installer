@@ -8,7 +8,7 @@
 </style>
 
 @extends('layouts.admin')
-@include('partials/admin.multiegg.nav', ['activeTab' => 'support', 'valid' => $valid])
+@include('partials/admin.multiegg.nav', ['activeTab' => 'support', 'valid' => $valid, 'global_settings' => $global_settings])
 
 {{-- Tab Title --}}
 @section('title')
