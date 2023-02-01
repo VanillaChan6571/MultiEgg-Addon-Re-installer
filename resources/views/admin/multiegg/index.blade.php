@@ -175,4 +175,4 @@ use app\Http\Controllers\MultiEggController;
 </div>
 @endif
 </div>
-@endsection
+@endsection 
