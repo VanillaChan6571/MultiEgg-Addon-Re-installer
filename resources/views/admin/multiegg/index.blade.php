@@ -2,6 +2,7 @@ use app\Http\Controllers\MultiEggController;
 
 <style>
         .extraPadd { padding-left: 100px }
+	.no-resize { resize: none; }
 </style>
 
 @extends('layouts.admin')
@@ -36,11 +37,11 @@ use app\Http\Controllers\MultiEggController;
                     <div class="box-body">
                         <div class="form-group">
                             <label class="form-label">Confirm Key</label>
-                            <textarea name="confirm_key" class="form-control" rows="3">{{ $key->confirm_key }}</textarea>
+                            <textarea name="confirm_key" class="form-control no-resize" rows="3">{{ $key->confirm_key }}</textarea>
                     </div>
                         <div class="form-group">
                             <label class="form-label">License Key</label>
-                            <textarea name="license_key" class="form-control" rows="3">{{ $key->license_key }}</textarea>
+                            <textarea name="license_key" class="form-control no-resize" rows="3">{{ $key->license_key }}</textarea>
                         </div>
                     </div>
                     @endforeach
@@ -90,33 +91,33 @@ use app\Http\Controllers\MultiEggController;
                     <div class="box-body">
                         <div class="form-group">
                             <label class="form-label">Identifier Key</label>
-                            <textarea name="v1" class="form-control" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
+                            <textarea name="v1" class="form-control no-resize" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="form-label">License Key</label>
-                            <textarea name="v2" class="form-control" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
+                            <textarea name="v2" class="form-control no-resize" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Change Domain</label>
                             <label class="warning">This can lock you out of this tab if you are not in set domain.</label>
-                            <textarea name="valid_domain" class="form-control" rows="1">{{ $information['domain'] }}</textarea>
+                            <textarea name="valid_domain" class="form-control no-resize" rows="1">{{ $information['domain'] }}</textarea>
                         </div>
                         @if( $feature_perms->watermark )
                         <div class="form-group">
                             <label class="form-label">Change WaterMark</label>
-                            <textarea name="custom_brand" class="form-control" rows="1">{{ $information['watermark'] }}</textarea>
+                            <textarea name="custom_brand" class="form-control no-resize" rows="1">{{ $information['watermark'] }}</textarea>
                         </div>
                         @endif
                         @if( $feature_perms->emails )
                         <div class="form-group">
                             <label class="form-label">Change Contact Email</label>
-                            <textarea name="contact_email" class="form-control" rows="1">{{ $information['email'] }}</textarea>
+                            <textarea name="contact_email" class="form-control no-resize" rows="1">{{ $information['email'] }}</textarea>
                         </div>
                         @endif
                         @if( $feature_perms->discord_link )
                         <div class="form-group">
                             <label class="form-label">Change Discord Link</label>
-                            <textarea name="discord_link" class="form-control" rows="1">{{ $information['discord'] }}</textarea>
+                            <textarea name="discord_link" class="form-control no-resize" rows="1">{{ $information['discord'] }}</textarea>
                         </div>
                         @endif
                     </div>
@@ -137,11 +138,11 @@ use app\Http\Controllers\MultiEggController;
                     <div class="box-body">
                         <div class="form-group">
                             <label class="form-label">Identifier Key</label>
-                            <textarea name="v1" class="form-control" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
+                            <textarea name="v1" class="form-control no-resize" readonly rows="5">{{ $rawkeys['confirm_key'] }}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="form-label">License Key</label>
-                            <textarea name="v2" class="form-control" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
+                            <textarea name="v2" class="form-control no-resize" readonly rows="5">{{ $rawkeys['license_key'] }}</textarea>
                         </div>
                         <div class="form-group">
                             {{ Form::label('mcj', 'Minecraft Java', array('class' => 'form-label')) }}
