@@ -5,6 +5,7 @@
 
 <style>
   .warning {color:#F02E30; font-weight:bold; font-size:12px;}
+  .no-resize { resize: none; }
 </style>
 
 @extends('layouts.admin')
@@ -31,35 +32,35 @@
 
 <div class="row" style="padding-left: 14px; padding-right: 14px">
     <div class="sol-sm-8">
-        <form action="https://api.multiegg.xyz/contactSupport.php" method="POST">
-        <div class="box">
-            <div class="box-header with-border">
-                <h3 class="box-title">Support Form</h3>
-            </div>
+	<form action="https://api.multiegg.xyz/contactSupport.php" method="POST">
+	<div class="box">
+	    <div class="box-header with-border">
+		<h3 class="box-title">Support Form</h3>
+	    </div>
 
-            <div class="box-body">
+	    <div class="box-body">
                 <div class="form-group">
                     {{ Form::label('email', 'Email') }}
-                    {{ Form::email('email', '', array('class' => 'form-control')) }}
+                    {{ Form::email('email', '', array('class' => 'form-control no-resize')) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::label('subject', 'Subject') }}
-                    {{ Form::text('subject', 'I need help with...', array('class' => 'form-control')) }}
-                </div>
-                <div class="form-group">
-                    {{ Form::label('body', 'Description') }}
-                    <textarea name="body" class="form-control" rows="5"></textarea>
-                </div>
-                <div>
-                    <textarea class="form-control" rows="2" readonly>By submitting this form, you consent for your panel Domain, IP, Addon Version, and other addons / license details to be shared with our support team. (We will get back to you within 3 business days)</textarea>
-                </div>
-                <div class="form-group">
-                    {{ Form::submit('Send', array('class' => 'btn btn-smm btn-primary pull-right')) }}
-                </div>
-            </div>
+		<div class="form-group">
+		    {{ Form::label('subject', 'Subject') }}
+		    {{ Form::text('subject', 'I need help with...', array('class' => 'form-control no-resize')) }}
+		</div>
+		<div class="form-group">
+		    {{ Form::label('body', 'Description') }}
+		    <textarea name="body" class="form-control no-resize" rows="5"></textarea>
+		</div>
+		<div>
+		    <textarea class="form-control no-resize" rows="2" readonly>By submitting this form, you consent for your panel Domain, IP, Addon Version, and other addons / license details to be shared with our support team. (We will get back to you within 3 business days)</textarea>
+		</div>
+		<div class="form-group">
+		    {{ Form::submit('Send', array('class' => 'btn btn-smm btn-primary pull-right')) }}
+		</div>
+	    </div>
 
-        </div>
-        </form>
+	</div>
+	</form>
     </div>
 </div>
 
