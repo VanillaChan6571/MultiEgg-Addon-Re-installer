@@ -46,7 +46,8 @@ class MultiEggController extends Controller
             'feature_perms'=>MultiEggController::getFeaturePerms(),
             'rawkeys'=>MultiEggController::getRawKeys(),
             'information'=>MultiEggController::getData(),
-            'game_toggles'=>MultiEggController::getToggles()
+            'game_toggles'=>MultiEggController::getToggles(),
+            'global_settings'=>MultiEggController::getGlobalSettings()
         ]);
     }
 
@@ -54,7 +55,8 @@ class MultiEggController extends Controller
     {
         return $this->view->make('admin.multiegg.support', [
             'valid'=>MultiEggController::isValid(),
-            'version'=>$this->version
+            'version'=>$this->version,
+            'global_settings'=>MultiEggController::getGlobalSettings()
        ]);
     }
 
