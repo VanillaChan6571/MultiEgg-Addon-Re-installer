@@ -100,16 +100,16 @@ class MultiEggController extends Controller
         }
         return Cache::get('multiegg_license');
     }
-    
+
     public function getGlobalSettings() {
-        if(!Cache::has('multiegg_globalsettings'){
+        if(!Cache::has('multiegg_globalsettings')){
             $url = "https://api.multiegg.xyz/addon/settings.json";
             $res = Http::get($url)->object();
         
-            $settings = \stdClass();
+            $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
-            $settings->current_version = "1.2.0";
+            $settings->current_version = "1.2.1";
             Cache::put('multiegg_globalsettings', $settings, now()->addMinutes(5));
         }
         return Cache::get('multiegg_globalsettings');
