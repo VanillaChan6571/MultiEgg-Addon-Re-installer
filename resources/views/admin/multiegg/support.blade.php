@@ -1,4 +1,3 @@
-
     // please no remove, the other tabs are literally identical to yours, and if you tryna access a higher plan, the api literally smack you across t>
     // sorry there, but welp, I guess that's one way to prevent pervs from tryna see the code nonsense
     //
@@ -32,7 +31,7 @@
 
 <div class="row" style="padding-left: 14px; padding-right: 14px">
     <div class="sol-sm-8">
-        <form action="some link here" method="POST">
+        <form action="https://api.multiegg.xyz/contactSupport.php" method="POST">
         <div class="box">
             <div class="box-header with-border">
                 <h3 class="box-title">Support Form</h3>
