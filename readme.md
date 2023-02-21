@@ -41,7 +41,7 @@ If you need any support contact us at our discord server: https://discord.gg/z4Z
 1. In routes/admin.php
 
 Under all file contents add:
-
+```
 /*
 |--------------------------------------------------------------------------
 | MultiEgg Controller Routes
@@ -50,7 +50,6 @@ Under all file contents add:
 | Endpoint: /admin/multiegg
 |
 */
-```
 Route::group(['prefix' => 'multiegg'], function () {
 
     Route::get('/', [Admin\MultiEggController::class, 'index'])->name('admin.multiegg.index');
@@ -70,7 +69,7 @@ Route::group(['prefix' => 'multiegg'], function () {
 ```
 
 2. In resources/views/layouts/admin.blade.php
-
+```
 Above:
 
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
@@ -82,7 +81,7 @@ Add:
                                 <i class="fa fa-gears"></i> <span>MultiEgg</span>
                             </a>
                         </li>
-
+```
 ## Installation Part 2a
 Easy right? now finish it off by running MultiEgg base script:
 
