@@ -1,4 +1,4 @@
-First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this BETA addon. This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. If you need any support contact us at our discord server: https://discord.gg/z4ZFaXUZMa 
+First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this EGG addon. This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. If you need any support contact us at our discord server: https://discord.gg/z4ZFaXUZMa 
 
 
 
