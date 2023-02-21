@@ -23,8 +23,8 @@
 *   [Forked Notice](#forked-notice)
 *   [Introduction](#introduction)
 *   [Part 1 Installation](#Installation-Part-1)
-*   [Base Installation](#Installation-Part-2)
-*   [Base Installation + Addon Reinstaller](#Installation-Part-3)
+*   [Base Installation](#Installation-Part-2a)
+*   [Base Installation + Addon Reinstaller](#Installation-Part-2b)
 *   [Addon Support List](#Addon-Supported)
 
 ## Forked Notice
