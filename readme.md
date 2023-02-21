@@ -10,7 +10,7 @@
       The MultiEgg Installer thats been forked to support Addon Reinstaller
     </b>
     <b>
-      The Modified Script was made by VanillaChan#6571
+      | The Modified Script was made by VanillaChan#6571
   </b>
 </p>
 
