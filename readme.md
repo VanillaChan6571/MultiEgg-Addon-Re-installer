@@ -50,6 +50,7 @@ Under all file contents add:
 | Endpoint: /admin/multiegg
 |
 */
+
 Route::group(['prefix' => 'multiegg'], function () {
     Route::get('/', [Admin\MultiEggController::class, 'index'])->name('admin.multiegg.index');
     Route::get('/lite', [Admin\MultiEggController::class, 'lite'])->name('admin.multiegg.lite');
