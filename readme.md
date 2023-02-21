@@ -1,7 +1,43 @@
-First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this EGG addon. This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. If you need any support contact us at our discord server: https://discord.gg/z4ZFaXUZMa 
+<p align="center">
+<img alt="MultiEgg Plugin + Addon Reinstaller"
+    src="https://cdn.discordapp.com/icons/1065406608605192312/7ff555c04132449c28e2d178445818f6.png?size=512">
+</p>
 
+<h1 align="center">MultiEgg Plugin + Addon Reinstaller</h1>
 
+<p align="center">
+ <b>
+      The MultiEgg Installer thats been forked to support Addon Reinstaller
+      The Modify Script was made by VanillaChan#6571
+  </b>
+</p>
 
+<p align="center">
+    <a href="https://discord.gg/z4ZFaXUZMa">
+        <img alt="Discord" src="https://img.shields.io/discord/293212540723396608?color=7289DA&label=Discord&logo=discord&logoColor=7289DA">
+    </a>
+</p>
+
+## Table of Contents 
+
+*   [Forked Notice](#forked-notice)
+*   [Introduction](#introduction)
+*   [Part 1 Installation](#Part1)
+*   [Base Installation](#Part2)
+*   [Base Installation + Addon Reinstaller](#Part3)
+*   [Addon Support List](#Part4)
+
+## Forked Notice
+THIS IS A FORKED PROJECT!!
+I do not and will not take any responsiblity for any corruption for database/sql stuff that MultiEgg may change!
+I will try my attempts to update the project early but you been warned as it may or may not work.
+
+## Introduction
+First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this EGG addon. 
+This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. 
+If you need any support contact us at our discord server: https://discord.gg/z4ZFaXUZMa
+
+## Part1
 1. In routes/admin.php
 
 Under all file contents add:
@@ -39,7 +75,21 @@ Add:
                                 <i class="fa fa-gears"></i> <span>MultiEgg</span>
                             </a>
                         </li>
-                        
-3. Easy right? now finish it off by running our script:
 
+## Part2
+Easy right? now finish it off by running MultiEgg base script:
+
+BASE INSTALL with no Addon Re-Installer:
 bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
+
+## Part3
+Or you can run Vanilla's Fork Script:
+
+BASE INSTALL with Addon Reinstaller:
+bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)
+
+## Part4
+Addon Support
+| | Addon's Currently Supported | Addon Link |
+| ------------------ | -------- | -------- |
+| **Wemx/Billing** | :heavy_check_mark: | **[Webpage](https://wemx.net/marketplace)** |
