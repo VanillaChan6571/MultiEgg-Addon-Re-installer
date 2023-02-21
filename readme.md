@@ -90,5 +90,5 @@ bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEg
 ## Addon Supported
 Addon Support
 | | Addon's Currently Supported | Addon Link |
-| ------------------ | -------- | -------- |
+| ------------------ | -------- | --------- |
 | **Wemx/Billing** | :heavy_check_mark: | **[Webpage](https://wemx.net/marketplace)** |
