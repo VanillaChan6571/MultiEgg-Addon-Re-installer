@@ -14,7 +14,7 @@
 
 <p align="center">
     <a href="https://discord.gg/z4ZFaXUZMa">
-        <img alt="Discord" src="https://img.shields.io/discord/293212540723396608?color=7289DA&label=Discord&logo=discord&logoColor=7289DA">
+        <img alt="Discord" src="https://img.shields.io/discord/1065406608605192312?color=7289DA&label=Discord&logo=discord&logoColor=7289DA">
     </a>
 </p>
 
@@ -22,10 +22,10 @@
 
 *   [Forked Notice](#forked-notice)
 *   [Introduction](#introduction)
-*   [Part 1 Installation](#Part1)
-*   [Base Installation](#Part2)
-*   [Base Installation + Addon Reinstaller](#Part3)
-*   [Addon Support List](#Part4)
+*   [Part 1 Installation](#Installation Part 1)
+*   [Base Installation](#Installation Part 2)
+*   [Base Installation + Addon Reinstaller](#Installation Part 3)
+*   [Addon Support List](#Addon Supported)
 
 ## Forked Notice
 THIS IS A FORKED PROJECT!!
@@ -50,21 +50,13 @@ Under all file contents add:
 | Endpoint: /admin/multiegg
 |
 */
-
 Route::group(['prefix' => 'multiegg'], function () {
-
     Route::get('/', [Admin\MultiEggController::class, 'index'])->name('admin.multiegg.index');
-    
     Route::get('/lite', [Admin\MultiEggController::class, 'lite'])->name('admin.multiegg.lite');
-    
     Route::get('/plus', [Admin\MultiEggController::class, 'plus'])->name('admin.multiegg.plus');
-    
     Route::get('/pro', [Admin\MultiEggController::class, 'pro'])->name('admin.multiegg.pro');
-    
     Route::get('/support', [Admin\MultiEggController::class, 'support'])->name('admin.multiegg.support');
-    
     Route::get('/api/clearcache', [Admin\MultiEggController::class, 'clearCache']);
-
     Route::post('/edit', [Admin\MultiEggController::class, 'update'])->name('admin.multiegg.edit');
 });
 
@@ -95,7 +87,7 @@ Or you can run Vanilla's Fork Script:
 BASE INSTALL with Addon Reinstaller:
 bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)
 
-## Addon Support
+## Addon Supported
 Addon Support
 | | Addon's Currently Supported | Addon Link |
 | ------------------ | -------- | -------- |
