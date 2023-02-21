@@ -50,18 +50,24 @@ Under all file contents add:
 | Endpoint: /admin/multiegg
 |
 */
-
+```
 Route::group(['prefix' => 'multiegg'], function () {
+
     Route::get('/', [Admin\MultiEggController::class, 'index'])->name('admin.multiegg.index');
+    
     Route::get('/lite', [Admin\MultiEggController::class, 'lite'])->name('admin.multiegg.lite');
+    
     Route::get('/plus', [Admin\MultiEggController::class, 'plus'])->name('admin.multiegg.plus');
+    
     Route::get('/pro', [Admin\MultiEggController::class, 'pro'])->name('admin.multiegg.pro');
+    
     Route::get('/support', [Admin\MultiEggController::class, 'support'])->name('admin.multiegg.support');
+    
     Route::get('/api/clearcache', [Admin\MultiEggController::class, 'clearCache']);
     
     Route::post('/edit', [Admin\MultiEggController::class, 'update'])->name('admin.multiegg.edit');
 });
-
+```
 
 2. In resources/views/layouts/admin.blade.php
 
