@@ -22,10 +22,10 @@
 
 *   [Forked Notice](#forked-notice)
 *   [Introduction](#introduction)
-*   [Part 1 Installation](#Installation Part 1)
-*   [Base Installation](#Installation Part 2)
-*   [Base Installation + Addon Reinstaller](#Installation Part 3)
-*   [Addon Support List](#Addon Supported)
+*   [Part 1 Installation](#Installation-Part-1)
+*   [Base Installation](#Installation-Part-2)
+*   [Base Installation + Addon Reinstaller](#Installation-Part-3)
+*   [Addon Support List](#Addon-Supported)
 
 ## Forked Notice
 THIS IS A FORKED PROJECT!!
