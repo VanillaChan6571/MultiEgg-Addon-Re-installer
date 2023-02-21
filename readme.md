@@ -42,7 +42,7 @@ If you need any support contact us at our discord server: https://discord.gg/z4Z
 ## Installation Part 1
 1. In routes/admin.php
 
-Under all file contents add:
+At the very bottom, insert the following:
 ```
 /*
 |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ Above:
 ```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
 ```
-Add:
+Replace with:
 
 ```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.multiegg') ?: 'active' }}">
