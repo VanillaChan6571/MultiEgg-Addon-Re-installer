@@ -8,8 +8,9 @@
 <p align="center">
  <b>
       The MultiEgg Installer thats been forked to support Addon Reinstaller
-     
-      The Modify Script was made by VanillaChan#6571
+    </b>
+    <b>
+      The Modified Script was made by VanillaChan#6571
   </b>
 </p>
 
