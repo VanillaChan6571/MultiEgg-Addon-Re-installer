@@ -1,6 +1,6 @@
 <p align="center">
 <img alt="MultiEgg Plugin + Addon Reinstaller"
-    src="https://cdn.discordapp.com/icons/1065406608605192312/7ff555c04132449c28e2d178445818f6.png?size=512">
+    src="https://cdn.discordapp.com/icons/1065406608605192312/7ff555c04132449c28e2d178445818f6.png?size=256">
 </p>
 
 <h1 align="center">MultiEgg Plugin + Addon Reinstaller</h1>
@@ -37,7 +37,7 @@ First of thank you so much for purchasing MultiEgg Premium! Hope you enjoy this 
 This is a simple install as most of it you just have to upload to your /var/www/pterodactyl directory. 
 If you need any support contact us at our discord server: https://discord.gg/z4ZFaXUZMa
 
-## Part1
+## Installation Part 1
 1. In routes/admin.php
 
 Under all file contents add:
@@ -50,12 +50,19 @@ Under all file contents add:
 | Endpoint: /admin/multiegg
 |
 */
+
 Route::group(['prefix' => 'multiegg'], function () {
+
     Route::get('/', [Admin\MultiEggController::class, 'index'])->name('admin.multiegg.index');
+    
     Route::get('/lite', [Admin\MultiEggController::class, 'lite'])->name('admin.multiegg.lite');
+    
     Route::get('/plus', [Admin\MultiEggController::class, 'plus'])->name('admin.multiegg.plus');
+    
     Route::get('/pro', [Admin\MultiEggController::class, 'pro'])->name('admin.multiegg.pro');
+    
     Route::get('/support', [Admin\MultiEggController::class, 'support'])->name('admin.multiegg.support');
+    
     Route::get('/api/clearcache', [Admin\MultiEggController::class, 'clearCache']);
 
     Route::post('/edit', [Admin\MultiEggController::class, 'update'])->name('admin.multiegg.edit');
@@ -76,19 +83,19 @@ Add:
                             </a>
                         </li>
 
-## Part2
+## Installation Part 2a
 Easy right? now finish it off by running MultiEgg base script:
 
 BASE INSTALL with no Addon Re-Installer:
 bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
 
-## Part3
+## Installation Part 2b
 Or you can run Vanilla's Fork Script:
 
 BASE INSTALL with Addon Reinstaller:
 bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)
 
-## Part4
+## Addon Support
 Addon Support
 | | Addon's Currently Supported | Addon Link |
 | ------------------ | -------- | -------- |
