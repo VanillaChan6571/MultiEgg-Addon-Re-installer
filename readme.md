@@ -64,13 +64,15 @@ Route::group(['prefix' => 'multiegg'], function () {
 ```
 
 2. In resources/views/layouts/admin.blade.php
-```
+
 Above:
 
+```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
-
+```
 Add:
 
+```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.multiegg') ?: 'active' }}">
                             <a href="{{ route('admin.multiegg.index') }}">
                                 <i class="fa fa-gears"></i> <span>MultiEgg</span>
