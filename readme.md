@@ -57,6 +57,7 @@ Route::group(['prefix' => 'multiegg'], function () {
     Route::get('/pro', [Admin\MultiEggController::class, 'pro'])->name('admin.multiegg.pro');
     Route::get('/support', [Admin\MultiEggController::class, 'support'])->name('admin.multiegg.support');
     Route::get('/api/clearcache', [Admin\MultiEggController::class, 'clearCache']);
+    
     Route::post('/edit', [Admin\MultiEggController::class, 'update'])->name('admin.multiegg.edit');
 });
 
