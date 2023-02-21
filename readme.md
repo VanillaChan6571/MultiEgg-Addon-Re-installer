@@ -70,7 +70,7 @@ Above:
 ```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
 ```
-Replace with:
+Add:
 
 ```
 <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.multiegg') ?: 'active' }}">
