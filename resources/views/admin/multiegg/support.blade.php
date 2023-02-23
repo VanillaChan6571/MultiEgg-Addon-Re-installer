@@ -52,7 +52,7 @@
 		    <textarea name="body" class="form-control no-resize" rows="5"></textarea>
 		</div>
 		<div>
-		    <textarea class="form-control no-resize" rows="2" readonly>By submitting this form, you consent for your panel Domain, IP, Addon Version, and other addons / license details to be shared with our support team. (We will get back to you within 1-3 business days)</textarea>
+		    <textarea class="form-control no-resize" rows="2" readonly>By submitting this form, you consent for your panel Domain, IP, Addon Version, and other addons / license details to be shared with our support team. (We will get back to you within 3 business days)</textarea>
 		</div>
 		<div class="form-group">
 		    {{ Form::submit('Send', array('class' => 'btn btn-smm btn-primary pull-right')) }}
