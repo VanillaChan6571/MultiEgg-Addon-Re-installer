@@ -95,7 +95,7 @@ class MultiEggController extends Controller
 
 
             $build = "https://api.multiegg.xyz/keyInfo.php?v1={$cKey[0]}&v2={$lKey[0]}";
-            $res = Http::get($build)->object();
+            $res = Http::timeout(30)->get($build)->object();
             Cache::put('multiegg_license', $res, now()->addMinutes(60));
         }
         return Cache::get('multiegg_license');
@@ -104,7 +104,7 @@ class MultiEggController extends Controller
     public function getGlobalSettings() {
         if(!Cache::has('multiegg_globalsettings')){
             $url = "https://api.multiegg.xyz/addon/settings.json";
-            $res = Http::get($url)->object();
+            $res = Http::timeout(30)->get($url)->object();
         
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
