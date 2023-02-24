@@ -35,6 +35,7 @@ class MultiEggController extends Controller
         $keys = DB::select('select * from `multiegg`');
         if(!MultiEggController::verify()) {
                 echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, just wait 5 minutes at max. If you still see this error after that, please let a member of Administration know.";
+		exit;
         }
         return $this->view->make('admin.multiegg.index', [
             'version' => $this->version,
@@ -58,6 +59,7 @@ class MultiEggController extends Controller
     {
         if(!MultiEggController::verify()) {
                 echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, please wait at max 5 minutes. If you still see this error after that, please contact a member of Administration.";
+		exit;
         }
         return $this->view->make('admin.multiegg.support', [
             'valid'=>MultiEggController::isValid(),
