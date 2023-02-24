@@ -27,6 +27,7 @@
 *   [Part 1 Installation](#Installation-Part-1)
 *   [Base Installation](#Installation-Part-2a)
 *   [Base Installation + Addon Reinstaller](#Installation-Part-2b)
+*   [Download Versions](#Download-Version-History)
 *   [Addon Support List](#Addon-Supported)
 
 ## Forked Notice
@@ -84,13 +85,10 @@ bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 
 ## Installation Part 2b
 <p>BASE INSTALL with no Addon Re-Installer:</p>
-<p> </p>
-``` 
 bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)> 
-```
-<p> </p>
 <p>Always Latest Version!!!</p>
 
+## Download Version History
 All Download Verions
 | Version | Download |
 | --- | -------------------- |
@@ -103,5 +101,4 @@ Addon Support List
 | ------------------ | -------- | ----- |--------- |
 | **Wemx/Billing** | :heavy_check_mark: | 1.0 | **[Webpage](https://wemx.net/marketplace)** |
 
-Legend Key:
-Installer Versison Added: This indicates on when it was added. Example Wemx/Billing was added on 1.0
+Installer Versison Added indicates on when it was added. Example Wemx/Billing was added on 1.0
