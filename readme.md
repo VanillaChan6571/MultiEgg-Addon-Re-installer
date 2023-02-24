@@ -36,7 +36,9 @@ Add:
                                 <i class="fa fa-gears"></i> <span>MultiEgg</span>
                             </a>
                         </li>
-                        
-3. Easy right? now finish it off by running our script:
+ 
+3. In `.env`, add `APP_VERSION=`, after the `=`, put your panel version. If you do not specify, it will default to the latest. 
+
+4. Easy right? now finish it off by running our script:
 
 bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
