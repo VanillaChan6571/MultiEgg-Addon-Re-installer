@@ -85,11 +85,18 @@ bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
 ## Installation Part 2b
 Or you can run Vanilla's Fork Script:
 
-BASE INSTALL with Addon Reinstaller:
-bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)
+BASE INSTALL with Addon Reinstaller: **[Current Version | 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)**
+Linux/Bash for Current Version: 
+```bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)>```
+
+Older Versions
+**[1.0](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)**
 
 ## Addon Supported
-Addon Support
-| | Addon's Currently Supported | Addon Link |
-| ------------------ | -------- | --------- |
-| **Wemx/Billing** | :heavy_check_mark: | **[Webpage](https://wemx.net/marketplace)** |
+Addon Support List
+| | Addon's Currently Supported | Installer Version Added | Addon Link |
+| ------------------ | -------- | ----- |--------- |
+| **Wemx/Billing** | :heavy_check_mark: | 1.0 | **[Webpage](https://wemx.net/marketplace)** |
+
+Legend Key:
+Installer Versison Added: This indicates on when it was added. Example Wemx/Billing was added on 1.0
