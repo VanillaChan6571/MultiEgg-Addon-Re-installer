@@ -80,17 +80,16 @@ Add:
 Easy right? now finish it off by running MultiEgg base script:
 
 BASE INSTALL with no Addon Re-Installer:
-bash <(curl -s https://api.multiegg.xyz/addon/install.sh)
+bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 
 ## Installation Part 2b
 Or you can run Vanilla's Fork Script:
 
-BASE INSTALL with Addon Reinstaller: **[Current Version | 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)**
-Linux/Bash for Current Version: 
-```bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)>```
-
-Older Versions
-**[1.0](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)**
+BASE INSTALL with Addon Reinstaller: 
+| | Version | Download | Bash |
+| ------------------| ----- |--------- |
+| 1.1 | **[Current Version | 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** | bash <(https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)> |
+| 1.0 | **[1.0 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)**| bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)> |
 
 ## Addon Supported
 Addon Support List
