@@ -85,7 +85,9 @@ bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 
 ## Installation Part 2b
 <p>BASE INSTALL with no Addon Re-Installer:</p>
+
 bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)> 
+
 <p>Always Latest Version!!!</p>
 
 ## Download Version History
