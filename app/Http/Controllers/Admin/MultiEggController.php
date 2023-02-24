@@ -109,7 +109,7 @@ class MultiEggController extends Controller
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
-            $settings->current_version = "1.2.2";
+            $settings->current_version = "1.2.4";
             Cache::put('multiegg_globalsettings', $settings, now()->addMinutes(5));
         }
         return Cache::get('multiegg_globalsettings');
@@ -150,9 +150,15 @@ class MultiEggController extends Controller
     }
 
     public function prettyDate() {
-        $date = strtotime(MultiEggController::getExpiry());
-        $prettyDate = date('M d Y', $date);
-        return $prettyDate;
+	$now = new DateTime();
+	$future_date = new DateTime(MultiEggController::getExpiry());
+
+	$interval = $future_date->diff($now);
+	$interval_pretty = $interval->format("(%a day(s), %h hour(s))");
+
+	$expiry = strtotime(MultiEggController::getExpiry());
+	$expiry_pretty = date('M d Y', $expiry);
+        return $expiry_pretty." ".$interval_pretty;
     }
 
     public function timeValid() {
