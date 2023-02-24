@@ -83,9 +83,8 @@ BASE INSTALL with no Addon Re-Installer:
 bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 
 ## Installation Part 2b
-Or you can run Vanilla's Fork Script:
-```Current Bash Version 1.1```
-```bash <curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh>```
+BASE INSTALL with no Addon Re-Installer:
+bash <curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh> Always Latest Version
 
 All Download Verions
 | Version | Download |
