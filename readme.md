@@ -77,6 +77,9 @@ Add:
                             </a>
                         </li>
 ```
+Finally:
+
+In `.env`, add `APP_VERSION=`, after the `=`, put your panel version. If you do not specify, it will default to the latest. 
 ## Installation Part 2a
 Easy right? now finish it off by running MultiEgg base script:
 
@@ -86,15 +89,16 @@ bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 ## Installation Part 2b
 <p>BASE INSTALL with Addon Re-Installer:</p>
 
-bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)
+bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)
 
 <p>Bash is Always The Latest Version!!!</p>
 
 ## Download Version History
 All Download Verions
 | Version | Download | Unix Bash Code |
-| --- | -------------------- | -------------------- | 
-| 1.1 | **[Current Version - 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh) |
+| --- | -------------------- | -------------------- |
+| 1.2 | **[Current Version - 1.2](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh) |
+| 1.1 | **[1.1 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh) |
 | 1.0 | **[1.0 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh) |
 
 ## Addon Supported
