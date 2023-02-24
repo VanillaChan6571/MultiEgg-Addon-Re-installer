@@ -89,9 +89,9 @@ Current Bash Version 1.1:
 
 All Download Verions
 | | Version | Download |
-| --- | ----- | -------------------- |
-| 1.1 | **[Current Version - 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** |
-| 1.0 | **[1.0 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)** |
+| | --- | ----- | -------------------- |
+| | 1.1 | **[Current Version - 1.1](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** |
+| | 1.0 | **[1.0 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)** |
 
 ## Addon Supported
 Addon Support List
