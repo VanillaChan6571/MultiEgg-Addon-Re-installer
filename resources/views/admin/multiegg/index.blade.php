@@ -10,10 +10,12 @@ use app\Http\Controllers\MultiEggController;
 
 {{ Html::favicon( '/public/favicon/favicon.ico' ) }}
 
+{{-- Tab Title --}}
 @section('title')
     MultiEgg
 @endsection
 
+{{-- Tab Section --}}
 @section('content-header')
     <h1>MultiEgg Overview</h1>
     <ol class="breadcrumb">
@@ -25,6 +27,7 @@ use app\Http\Controllers\MultiEggController;
 @section('content')
 @yield('multiegg::nav')
 
+{{-- Main Code --}}
 @if( !$global_settings->mass_disable )
 <div class="row">
         <div class="col-sm-6">
