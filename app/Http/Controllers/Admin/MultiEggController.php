@@ -156,9 +156,15 @@ class MultiEggController extends Controller
     }
 
     public function prettyDate() {
-        $date = strtotime(MultiEggController::getExpiry());
-        $prettyDate = date('M d Y', $date);
-        return $prettyDate;
+	$now = new DateTime();
+	$future_date = new DateTime(MultiEggController::getExpiry());
+
+	$interval = $future_date->diff($now);
+	$interval_pretty = $interval->format("(%a day(s), %h hour(s))");
+
+	$expiry = strtotime(MultiEggController::getExpiry());
+	$expiry_pretty = date('M d Y', $expiry);
+        return $expiry_pretty." ".$interval_pretty;
     }
 
     public function timeValid() {
