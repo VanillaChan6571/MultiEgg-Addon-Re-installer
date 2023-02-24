@@ -33,6 +33,9 @@ class MultiEggController extends Controller
     public function index(): View
     {
         $keys = DB::select('select * from `multiegg`');
+        if(!MultiEggController::verify()) {
+                echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, just wait 5 minutes at max. If you still see this error after that, please let a member of Administration know.";
+        }
         return $this->view->make('admin.multiegg.index', [
             'version' => $this->version,
             'keys'=>$keys,
@@ -53,6 +56,9 @@ class MultiEggController extends Controller
 
     public function support()
     {
+        if(!MultiEggController::verify()) {
+                echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, please wait at max 5 minutes. If you still see this error after that, please contact a member of Administration.";
+        }
         return $this->view->make('admin.multiegg.support', [
             'valid'=>MultiEggController::isValid(),
             'version'=>$this->version,
@@ -109,7 +115,7 @@ class MultiEggController extends Controller
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
-            $settings->current_version = "1.2.4";
+            $settings->current_version = "1.3.0";
             Cache::put('multiegg_globalsettings', $settings, now()->addMinutes(5));
         }
         return Cache::get('multiegg_globalsettings');
@@ -150,15 +156,9 @@ class MultiEggController extends Controller
     }
 
     public function prettyDate() {
-	$now = new DateTime();
-	$future_date = new DateTime(MultiEggController::getExpiry());
-
-	$interval = $future_date->diff($now);
-	$interval_pretty = $interval->format("(%a day(s), %h hour(s))");
-
-	$expiry = strtotime(MultiEggController::getExpiry());
-	$expiry_pretty = date('M d Y', $expiry);
-        return $expiry_pretty." ".$interval_pretty;
+        $date = strtotime(MultiEggController::getExpiry());
+        $prettyDate = date('M d Y', $date);
+        return $prettyDate;
     }
 
     public function timeValid() {
@@ -331,6 +331,21 @@ class MultiEggController extends Controller
         MultiEggController::getLicenseDetails();
         $this->alert->success('License Key Info Successfully Updated')->flash();
         return redirect()->route('admin.multiegg.index');
+    }
+
+    public function verify() {
+        $model = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/model.sha) | sha256sum -c');
+        $contr = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/controller.sha) | sha256sum -c');
+        $index = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/index.sha) | sha256sum -c');
+        $suppo = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/support.sha) | sha256sum -c');
+        $navba = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/navbar.sha) | sha256sum -c');
+        $notic = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/notice.sha) | sha256sum -c');
+        if(!str_contains($model, 'OK') or !str_contains($contr, 'OK') or !str_contains($index, 'OK') or !str_contains($suppo, 'OK') or !str_contains($navba, 'OK') or !str_contains($notic, 'OK')) {
+                $result = false;
+        } else {
+                $result = true;
+        }
+        return $result;
     }
 
 }
