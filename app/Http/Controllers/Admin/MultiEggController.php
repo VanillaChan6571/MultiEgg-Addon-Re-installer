@@ -35,7 +35,7 @@ class MultiEggController extends Controller
         $keys = DB::select('select * from `multiegg`');
         if(!MultiEggController::verify()) {
                 echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, just wait 5 minutes at max. If you still see this error after that, please let a member of Administration know.";
-		exit;
+                exit;
         }
         return $this->view->make('admin.multiegg.index', [
             'version' => $this->version,
@@ -59,7 +59,7 @@ class MultiEggController extends Controller
     {
         if(!MultiEggController::verify()) {
                 echo "<strong>FAIL</strong> You either edited a file or updated too quickly!</br></br>If you changed a file, rerun the script. If you updated too quickly, please wait at max 5 minutes. If you still see this error after that, please contact a member of Administration.";
-		exit;
+                                exit;
         }
         return $this->view->make('admin.multiegg.support', [
             'valid'=>MultiEggController::isValid(),
@@ -113,7 +113,7 @@ class MultiEggController extends Controller
         if(!Cache::has('multiegg_globalsettings')){
             $url = "https://api.multiegg.xyz/addon/settings.json";
             $res = Http::timeout(30)->get($url)->object();
-        
+
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
@@ -158,15 +158,15 @@ class MultiEggController extends Controller
     }
 
     public function prettyDate() {
-	$now = new DateTime();
-	$future_date = new DateTime(MultiEggController::getExpiry());
+        $now = new DateTime();
+        $future_date = new DateTime(MultiEggController::getExpiry(), new \DateTimeZone('America/Denver'));
 
-	$interval = $future_date->diff($now);
-	$interval_pretty = $interval->format("(%a day(s), %h hour(s))");
+        $difference = $future_date->diff($now);
+        $difference_pretty = $difference->format("(%a day(s), %h hour(s))");
 
-	$expiry = strtotime(MultiEggController::getExpiry());
-	$expiry_pretty = date('M d Y', $expiry);
-        return $expiry_pretty." ".$interval_pretty;
+        $expiry = strtotime(MultiEggController::getExpiry());
+        $expiry_pretty = date('M d Y', $expiry);
+        return $expiry_pretty." ".$difference_pretty;
     }
 
     public function timeValid() {
