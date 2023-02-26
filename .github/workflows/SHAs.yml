@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Move around
+        run: cd /home/runner/work/plugin/plugin
       - name: Controller SHA
         run: sha256sum app/Http/Controllers/MultiEggController.php
 
