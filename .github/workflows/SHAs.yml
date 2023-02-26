@@ -11,19 +11,5 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: List Files
-        run: ls /home/runner/work/plugin/
+        run: ls /home/runner/work/plugin/plugin/
 
-      - name: Controller SHA
-        run: sha256sum /home/runner/work/plugin/plugin/app/Http/Controllers/MultiEggController.php
-
-      - name: Index SHA
-        run: sha256sum /home/runner/work/plugin/plugin/resources/views/admin/multiegg/index.blade.php
-
-      - name: Support SHA
-        run: sha256sum /home/runner/work/plugin/plugin/resources/views/admin/multiegg/support.blade.php
-
-      - name: Nav SHA
-        run: sha256sum /home/runner/work/plugin/plugin/resources/views/partials/admin/multiegg/nav.blade.php
-
-      - name: Notice SHA
-        run: sha256sum /home/runner/work/plugin/plugin/resources/views/partials/admin/multiegg/notice.blade.php
