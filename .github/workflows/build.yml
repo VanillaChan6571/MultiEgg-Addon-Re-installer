@@ -27,4 +27,20 @@ jobs:
 
       - name: Notice SHA
         run: sha256sum /home/runner/work/plugin/plugin/resources/views/partials/admin/multiegg/notice.blade.php
+  make_tarball:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Make Tarball
+        run: |
+          cd /home/runner/work/plugin/plugin
+          tar -zcvf addon.tar.gz app/ database/ resources/
+      
+      - name: Publish Tarball
+        uses: actions/upload-artifact@v3
+        with:
+          name: addon.tar.gz
+          path: /home/runner/work/plugin/plugin/addon.tar.gz
 
