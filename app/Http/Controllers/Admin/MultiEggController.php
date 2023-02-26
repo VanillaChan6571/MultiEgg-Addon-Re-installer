@@ -117,7 +117,7 @@ class MultiEggController extends Controller
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
-            $settings->current_version = "1.3.1";
+            $settings->current_version = "1.3.2";
             Cache::put('multiegg_globalsettings', $settings, now()->addMinutes(5));
         }
         return Cache::get('multiegg_globalsettings');
@@ -270,8 +270,6 @@ class MultiEggController extends Controller
 
     public function domainValid() {
         if(MultiEggController::keyValid()){
-            Log::info(config('app.url'));
-            Log::info(MultiEggController::getDomain());
             if(config('app.url') == MultiEggController::getDomain()){
                 return true;
             }
@@ -342,12 +340,15 @@ class MultiEggController extends Controller
     }
 
     public function verify() {
-        $model = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/model.sha) | sha256sum -c');
-        $contr = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/controller.sha) | sha256sum -c');
-        $index = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/index.sha) | sha256sum -c');
-        $suppo = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/support.sha) | sha256sum -c');
-        $navba = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/navbar.sha) | sha256sum -c');
-        $notic = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/notice.sha) | sha256sum -c');
+        $global = MultiEggController::getGlobalSettings();
+        $version = $global->current_version;
+        
+        $model = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/model.sha) | sha256sum -c');
+        $contr = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/controller.sha) | sha256sum -c');
+        $index = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/index.sha) | sha256sum -c');
+        $suppo = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/support.sha) | sha256sum -c');
+        $navba = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/navbar.sha) | sha256sum -c');
+        $notic = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/notice.sha) | sha256sum -c');
         if(!str_contains($model, 'OK') or !str_contains($contr, 'OK') or !str_contains($index, 'OK') or !str_contains($suppo, 'OK') or !str_contains($navba, 'OK') or !str_contains($notic, 'OK')) {
                 $result = false;
         } else {
