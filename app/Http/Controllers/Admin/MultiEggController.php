@@ -270,8 +270,6 @@ class MultiEggController extends Controller
 
     public function domainValid() {
         if(MultiEggController::keyValid()){
-            Log::info(config('app.url'));
-            Log::info(MultiEggController::getDomain());
             if(config('app.url') == MultiEggController::getDomain()){
                 return true;
             }
