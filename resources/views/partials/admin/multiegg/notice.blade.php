@@ -14,7 +14,7 @@ use app\Http\Controllers\MultiEggController;
         <div class="row">
             <div class="col-xs-12">
                 <div class="alert alert-warning">
-                    Your addon is outdated! Please update it as soon as you can! You are on version $global_settings->current_version, and the latest is $global_settings->latest_version.
+                    Your addon is outdated! Please update it as soon as you can! You are on version {{ $global_settings->current_version }}, and the latest is {{ $global_settings->latest_version }}.
                 </div>
             </div>
         </div>
