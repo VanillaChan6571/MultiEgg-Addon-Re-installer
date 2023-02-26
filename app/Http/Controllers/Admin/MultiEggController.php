@@ -158,6 +158,9 @@ class MultiEggController extends Controller
     }
 
     public function prettyDate() {
+        if(!MultiEggController::keyValid()) {
+            return "ERROR";
+        }
         $now = new DateTime();
         $future_date = new DateTime(MultiEggController::getExpiry(), new \DateTimeZone('America/Denver'));
 
