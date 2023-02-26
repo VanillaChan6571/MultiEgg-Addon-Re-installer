@@ -117,7 +117,7 @@ class MultiEggController extends Controller
             $settings = new \stdClass();
             $settings->mass_disable = $res->mass_disable;
             $settings->latest_version = $res->latest_version;
-            $settings->current_version = "1.3.1";
+            $settings->current_version = "1.3.2";
             Cache::put('multiegg_globalsettings', $settings, now()->addMinutes(5));
         }
         return Cache::get('multiegg_globalsettings');
@@ -342,6 +342,7 @@ class MultiEggController extends Controller
     public function verify() {
         $global = MultiEggController::getGlobalSettings();
         $version = $global->current_version;
+        
         $model = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/model.sha) | sha256sum -c');
         $contr = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/controller.sha) | sha256sum -c');
         $index = exec('echo $(curl -s https://api.multiegg.xyz/addon/SHAs/${version}/index.sha) | sha256sum -c');
