@@ -1,14 +1,17 @@
-name: Get SHAs
+name: Build
 
 on:
   push:
 
 jobs:
-  build:
+  get-shas:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: List Files
+        run: ls /home/runner/work/plugin/
 
       - name: Controller SHA
         run: sha256sum /home/runner/work/plugin/plugin/app/Http/Controllers/MultiEggController.php
