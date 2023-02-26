@@ -1,0 +1,26 @@
+name: Get SHAs
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Controller SHA
+        run: sha256sum app/Http/Controllers/MultiEggController.php
+
+      - name: Index SHA
+        run: sha256sum resources/views/admin/multiegg/index.blade.php
+
+      - name: Support SHA
+        run: sha256sum resources/views/admin/multiegg/support.blade.php
+
+      - name: Nav SHA
+        run: sha256sum resources/views/partials/admin/multiegg/nav.blade.php
+
+      - name: Notice SHA
+        run: sha256sum resources/views/partials/admin/multiegg/notice.blade.php
