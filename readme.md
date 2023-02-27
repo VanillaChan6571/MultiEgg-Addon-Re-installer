@@ -89,7 +89,7 @@ bash <(curl -s https://api.multiegg.xyz/addon/install.sh) Always Latest Version
 ## Installation Part 2b
 <p>BASE INSTALL with Addon Re-Installer:</p>
 
-bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)
+bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.3-Reinstaller-install.sh)
 
 <p>Bash is Always The Latest Version!!!</p>
 
@@ -97,7 +97,8 @@ bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEg
 All Download Verions
 | Fork Version | Base Version | Download | Unix Bash Code |
 | --- | --- | -------------------- | -------------------- |
-| 1.2 | 1.2.4 | **[Current Version - 1.2](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh) |
+| 1.3 | 1.3.2 | **[Current Version - 1.3](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.3-Reinstaller-install.sh) |
+| 1.2 | 1.2.4 | **[1.2 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.2-Reinstaller-install.sh) |
 | 1.1 | 1.2.2 | **[1.1 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-1.1-Reinstaller-install.sh) |
 | 1.0 | 1.2.1 | **[1.0 Download](https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh)** | bash <(curl -s https://cdn.mcneko.net/MultiEgg-Plugin%2BAddon-Reinstaller/MutiEgg-Plugin%2BAddon-Reinstaller-install.sh) |
 
