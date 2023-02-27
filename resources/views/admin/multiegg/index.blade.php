@@ -2,7 +2,7 @@ use app\Http\Controllers\MultiEggController;
 
 <style>
         .extraPadd { padding-left: 100px }
-	.no-resize { resize: none; }
+        .no-resize { resize: none; }
 </style>
 
 @extends('layouts.admin')
@@ -74,6 +74,7 @@ use app\Http\Controllers\MultiEggController;
                     Client: <strong>{{ $client }}</strong></br>
                     Client Business: <strong>{{ $business }}</strong></br>
                     Status: <strong>{{ $valid }}</strong></br>
+                    Current Version: <strong>{{ $global_settings->current_version }}</strong>
                     @else
                     Status: <strong>{{ $valid }}</strong></br>
                     Probable Causes: <strong>Invalid Domain | Wrong Key | Expired Key</strong></br>
