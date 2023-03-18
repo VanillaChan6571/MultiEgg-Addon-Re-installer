@@ -1,6 +1,6 @@
 <p align="center">
 <img alt="MultiEgg Plugin + Addon Reinstaller"
-    src="https://cdn.discordapp.com/icons/1065406608605192312/7ff555c04132449c28e2d178445818f6.png?size=256">
+    src="https://cdn.discordapp.com/icons/1065406608605192312/daffa139bb56e6bfe9238d3e5a81588d.webp?size=256">
 </p>
 
 <h1 align="center">MultiEgg Plugin + Addon Reinstaller</h1>
